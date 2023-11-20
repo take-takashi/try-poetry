@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "project02"
+version = "0.1.0"
+description = ""
+authors = ["sample"]
+readme = "README.md"
+packages = [{include = "project02", from = "src"}]
+
+# 相対パスでimportする場合はここに定義
+[tool.poetry.dependencies]
+python = "^3.11"
+# src = {path = "src", develop = false}
+jupyter = "^1.0.0"
+ipykernel = "^6.26.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+# このpytest設定を追加するとpoetry run pytestが動く
+[tool.pytest.ini_options]
+pythonpath = "src/project02"

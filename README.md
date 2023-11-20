@@ -17,3 +17,14 @@ cd project
 poetry run pytest
 
 ```
+
+## project02 setup
+```sh
+poetry new project02 --src
+# pyproject.tomlの編集を忘れずに行うこと。
+cd project-2/src/project02
+poetry add jupyter ipykernel # インタープリターが選択できない
+# direnvも試してみているが、まだわからない
+# poetry config virtualenvs.in-project true --local # このコマンドは大事
+# .venvが作られるようにはなったが、インタプリターが選択できない
+```
